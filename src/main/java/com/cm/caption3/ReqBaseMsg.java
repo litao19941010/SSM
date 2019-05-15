@@ -1,4 +1,4 @@
-package com.cm.caption2;
+package com.cm.caption3;
 
 /**
  * 所有主动调用模式下信息推送的父类

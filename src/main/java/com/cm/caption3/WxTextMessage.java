@@ -1,4 +1,4 @@
-package com.cm.caption2;
+package com.cm.caption3;
 
 public class WxTextMessage extends ReqBaseMsg {
 

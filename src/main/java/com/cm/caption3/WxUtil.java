@@ -1,4 +1,4 @@
-package com.cm.caption2;
+package com.cm.caption3;
 
 import net.sf.json.JSONObject;
 import org.apache.http.HttpEntity;
@@ -34,7 +34,6 @@ public class WxUtil {
     public static final String MESSAGE_CORPID = "wwdd9c4fefd2b707b6";
     //企业公众号 密钥
     public static final String MESSAGE_SECRET = "wTYoOULNMZUZq5CF3zrBahnPHHBzkWIREzi32UT3Prg";
-
 
     //错误信息
     public static final String ESSOR_MESAGE = "Unexpected response status: ";
