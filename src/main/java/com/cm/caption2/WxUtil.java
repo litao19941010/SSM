@@ -16,7 +16,9 @@ import org.apache.http.util.EntityUtils;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**微信企业号公用类
  * @author  LiTao
@@ -38,21 +40,17 @@ public class WxUtil {
     public static final String ESSOR_MESAGE = "Unexpected response status: ";
 
     public static void main(String[] args) {
-//       JSONObject jsonObject = sendImageTemp("video", "e:/media/3.mp4");
-       String media_id = "3nwm9fwbPwvkGj94II06nuuwOdHmlCQlCDSB6QVPRZVPdUCmgc9H_F0RC9f-cLDb-";
-        WxMediaMessage wxImageMessage = new WxMediaMessage(
-               "LiuLiu","","",
-                "video","video","1000003",
-                media_id,
-                "测试",
-                "李韬无聊测试的",
-                "0"
-        );
-       new WxUtil().sendReqMsg(wxImageMessage);
+        WxNewsMessage news = new WxNewsMessage("LiuLiu","","","news","1000003");
+        WxArticle article1 = new WxArticle("卡西欧新闻","卡西欧2019年4月新手表发布","http://file.casio.com.cn/news/1943.html?n=1",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557897397307&di=3251127f37cb384219b01cfac86f7c08&imgtype=0&src=http%3A%2F%2Fcimg1.fenqile.com%2Fproduct%2FM00%2F08%2F03%2FghoGAFbQKnCAWD8fAAJkSuMf9tM219.jpg");
+//        WxArticle article2 = new WxArticle();
+//        WxArticle article3 = new WxArticle();
+        List<WxArticle> list = new ArrayList<WxArticle>();
+        list.add(article1);
 
+        news.setNews(list);
 
-
-
+        new WxUtil().sendReqMsg(news);
     }
 
     public JSONObject sendReqMsg(ReqBaseMsg mess) {
