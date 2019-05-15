@@ -38,19 +38,6 @@ public class WxUtil {
     //错误信息
     public static final String ESSOR_MESAGE = "Unexpected response status: ";
 
-    public static void main(String[] args) {
-        WxNewsMessage news = new WxNewsMessage("LiuLiu","","","news","1000003");
-        WxArticle article1 = new WxArticle("卡西欧新闻","卡西欧2019年4月新手表发布","http://file.casio.com.cn/news/1943.html?n=1",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557897397307&di=3251127f37cb384219b01cfac86f7c08&imgtype=0&src=http%3A%2F%2Fcimg1.fenqile.com%2Fproduct%2FM00%2F08%2F03%2FghoGAFbQKnCAWD8fAAJkSuMf9tM219.jpg");
-//        WxArticle article2 = new WxArticle();
-//        WxArticle article3 = new WxArticle();
-        List<WxArticle> list = new ArrayList<WxArticle>();
-        list.add(article1);
-
-        news.setNews(list);
-
-        new WxUtil().sendReqMsg(news);
-    }
 
     public JSONObject sendReqMsg(ReqBaseMsg mess) {
         String context = mess.toJsonStr();

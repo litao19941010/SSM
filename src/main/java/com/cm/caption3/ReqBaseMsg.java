@@ -29,8 +29,15 @@ public abstract class ReqBaseMsg {
     protected String agentid;
 
     /**
+     * 是否保密
+     */
+    protected String safe;
+
+
+    /**
      * 定义抽象方法
      * @return
      */
+
     public abstract String toJsonStr();
 }

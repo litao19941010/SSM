@@ -25,7 +25,7 @@ public class WxNewsMessage extends ReqBaseMsg {
         super.agentid = agentid;
 
     }
-    @Override
+
     public String toJsonStr() {
         StringBuffer jsonStr = new StringBuffer("{");
         StringBuffer str_tmp = new StringBuffer("");
